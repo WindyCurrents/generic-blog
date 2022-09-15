@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dokumentacja projektu generic-blog-beta</h1>
+    <h2>Punkt 1. connecttodb.php</h2>
+    <p>Podpunkt a.: Pierwsze 4 części kodu</p>
+    <p>skrypt ustanawia 4 zmienne połączenia z bazą danych użytkowników blogu, $host="localhost",$user="root",$pass="",$dbname="genericblogbetadatabase"</p>
+    <p>Podpunkt b.: Pozostała część kodu</p>
+    <p>używając zmiennych z pierwszych linijek skrypt próbuje nawiązać połączenie z bazą danych</p>
+    <h2>Punkt 2. genericblogbetadatabase.sql</h2>
+    <p>jest to pusta baza danych użytkowników z tabelą userdata zawierającą kolumny UserID, Username i Password. UserID jest kluczem głównym</p>
+    <h2>Punkt 3. index.php</h2>
+    <p>jest to niestylizowana strona informująca użytkownika iż jest to nieukończona wersja projektu generic-blog. istnieje link do zalogowania się do panelu administracyjnego.</p>
+    <h2>Punkt 4. loginmanagescript.php</h2>
+    <p>skrypt składa się z 4 funkcji służących do obsługi logowania użytkownika. getuserid i getusername zwracają funkcję isloggedon z id użytkownika lub jego nazwą. isloggedon zwraca ustawienie $_SESSION na id zalogowanego użytkownika. logon bierze dane z formularza w loginpage.php i próbuje znaleźć pasujący rekord w bazie danych aby zalogować użytkownika.</p>
+    <h2>Ostatni punkt. loginpage.php</h2>
+    <p>jest to prosty formularz logowania który zawiera wyłącznie 2 pola i przycisk logowania.</p>
+    © Konrad Płotka z klasy 2PE Technikum TEB Edukacja w Koszalinie 2022.
+</body>
+</html>

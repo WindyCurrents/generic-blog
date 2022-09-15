@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Documentation of the generic-blog-beta project </h1>
+    <h2> Point 1. connecttodb.php </h2>
+    <p> Subheading a .: First 4 parts of the code </p>
+    <p> the script establishes 4 connection variables to the blog user database, $ host = "localhost", $ user = "root", $ pass = "", $ dbname = "genericblogbetadatabase" </p>
+    <p> Subb.: Rest of code </p>
+    <p> using the variables in the first lines, the script tries to connect to the database </p>
+    <h2> Item 2. genericblogbetadatabase.sql </h2>
+    <p>it is an empty user database with a userdata table containing the UserID, Username and Password columns. UserID is the root key </p>
+    <h2> Item 3 index.php </h2>
+    <p>it is a nonstylized page informing the user that this is an unfinished version of the generic-blog project. there is a link to login to the admin panel. </p>
+    <h2> Item 4. loginmanagescript.php </h2>
+    <p> script consists of 4 functions for handling user login. getuserid and getusername both return the isloggedon function with the user id or username. isloggedon returns $ _SESSION to the logged in user id. logon takes data from the form at loginpage.php and tries to find a matching record in the database to log the user in. </p>
+    <h2> Last point. loginpage.php </h2>
+    <p>it is a simple login form which only contains 2 fields and a login button. </p>
+    © Konrad Płotka of class 2PE of Technikum TEB Edukacja in Koszalin 2022.
+</body>
+</html>
