@@ -13,7 +13,7 @@
     <h1>You landed in the beta of a Generic Blog. Leave me alone.</h1>
     <a href="loginpage.php">Administration Panel Login (only me)</a>
     <a href="genericblogbetadocumentationpl.html">Project documentation (Polish)</a>
-    <a href="genericblogbetadocumentationen.html">Project documentation (English)</a>
+    <a href="genericblogbetadocumentationen.html">Project documentation (English)</a><br>
     © Konrad Płotka of class 2PE of Technikum TEB Edukacja in Koszalin 2022.
 </body>
 </html>
