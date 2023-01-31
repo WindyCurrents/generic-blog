@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,20 +7,24 @@
     <title>Generic Blog Beta - Dokumentacja (Polski)</title>
 </head>
 <body>
-    <h1>Dokumentacja projektu generic-blog-beta</h1>
-    <h2>Punkt 1. connecttodb.php</h2>
-    <p>Podpunkt a.: Pierwsze 4 części kodu</p>
-    <p>skrypt ustanawia 4 zmienne połączenia z bazą danych użytkowników blogu, $host="localhost",$user="root",$pass="",$dbname="genericblogbetadatabase"</p>
-    <p>Podpunkt b.: Pozostała część kodu</p>
-    <p>używając zmiennych z pierwszych linijek skrypt próbuje nawiązać połączenie z bazą danych</p>
-    <h2>Punkt 2. genericblogbetadatabase.sql</h2>
-    <p>jest to pusta baza danych użytkowników z tabelą userdata zawierającą kolumny UserID, Username i Password. UserID jest kluczem głównym</p>
-    <h2>Punkt 3. index.php</h2>
-    <p>jest to niestylizowana strona informująca użytkownika iż jest to nieukończona wersja projektu generic-blog. istnieje link do zalogowania się do panelu administracyjnego.</p>
-    <h2>Punkt 4. loginmanagescript.php</h2>
-    <p>skrypt składa się z 4 funkcji służących do obsługi logowania użytkownika. getuserid i getusername zwracają funkcję isloggedon z id użytkownika lub jego nazwą. isloggedon zwraca ustawienie $_SESSION na id zalogowanego użytkownika. logon bierze dane z formularza w loginpage.php i próbuje znaleźć pasujący rekord w bazie danych aby zalogować użytkownika.</p>
-    <h2>Ostatni punkt. loginpage.php</h2>
-    <p>jest to prosty formularz logowania który zawiera wyłącznie 2 pola i przycisk logowania.</p>
-    © Konrad Płotka z klasy 2PE Technikum TEB Edukacja w Koszalinie 2022.
+    <h1> Dokumentacja projektu generic-blog-beta </h1>
+    <h2> Pozycja 1. connect.php</h2>
+    <p> Podtytuł a .: Pierwsze 4 części kodu </p>
+    <p> skrypt ustanawia 4 zmienne połączenia z bazą danych użytkowników bloga, $ host = "localhost", $ user = "root", $ pass = "", $ dbname = "genericblogbetadatabase" </p>
+    <p> Subb.: Reszta kodu </p>
+    <p> używając zmiennych w pierwszych wierszach, skrypt próbuje połączyć się z bazą danych </p>
+    <h2> Pozycja 2. genericblogbetadatabase.sql </h2>
+    <p>jest to baza danych użytkowników z tabelą użytkowników zawierającą kolumny identyfikatora, adresu e-mail, nazwy użytkownika i hasła. id jest kluczem podstawowym </p>
+    <h2> Pozycja 3. index.php </h2>
+    <p>jest to niestylizowana strona informująca użytkownika, że jest to niedokończona wersja projektu ogólnego bloga. znajduje się link do logowania do serwisu lub rejestracji. może również pokazać łącze wylogowania, jeśli użytkownik jest teraz zalogowany. </p>
+    <h2> Pozycja 4. login.php </h2>
+    <p> och, wow, to jest strona logowania </p>
+    <h2> Pozycja 5. logout.php </h2>
+    <p>usuwa dane związane z sesją i powraca do indeksu </p>
+    <h2>Element 6. register.php</h2>
+    <p>wow rzeczywista strona rejestracji, ma pewne filtry, takie jak 3-8 znaków w nazwie użytkownika? lub co najmniej 8 znaków w haśle</p>
+    <h2>Ostatnia pozycja. utils.php</h2>
+    <p>Obecnie ma tylko funkcje związane z logowaniem, później będzie można wstawiać i wyświetlać posty według ich identyfikatora</p>
+    © Konrad Płotka z klasy 2PE Technikum TEB Edukacja w Koszalinie 2023.
 </body>
 </html>

@@ -8,19 +8,23 @@
 </head>
 <body>
     <h1> Documentation of the generic-blog-beta project </h1>
-    <h2> Point 1. connecttodb.php </h2>
+    <h2> Item 1. connect.php</h2>
     <p> Subheading a .: First 4 parts of the code </p>
     <p> the script establishes 4 connection variables to the blog user database, $ host = "localhost", $ user = "root", $ pass = "", $ dbname = "genericblogbetadatabase" </p>
     <p> Subb.: Rest of code </p>
     <p> using the variables in the first lines, the script tries to connect to the database </p>
     <h2> Item 2. genericblogbetadatabase.sql </h2>
-    <p>it is an empty user database with a userdata table containing the UserID, Username and Password columns. UserID is the root key </p>
-    <h2> Item 3 index.php </h2>
-    <p>it is a nonstylized page informing the user that this is an unfinished version of the generic-blog project. there is a link to login to the admin panel. </p>
-    <h2> Item 4. loginmanagescript.php </h2>
-    <p> script consists of 4 functions for handling user login. getuserid and getusername both return the isloggedon function with the user id or username. isloggedon returns $ _SESSION to the logged in user id. logon takes data from the form at loginpage.php and tries to find a matching record in the database to log the user in. </p>
-    <h2> Last point. loginpage.php </h2>
-    <p>it is a simple login form which only contains 2 fields and a login button. </p>
-    © Konrad Płotka of class 2PE of Technikum TEB Edukacja in Koszalin 2022.
+    <p>it is an user database with a users table containing the id, email, username and password columns. id is the primary key </p>
+    <h2> Item 3. index.php </h2>
+    <p>it is a nonstylized page informing the user that this is an unfinished version of the generic-blog project. there is a link to login to the site or register. could also show a logout link if user is now logged in. </p>
+    <h2> Item 4. login.php </h2>
+    <p> oh wow it is a login page </p>
+    <h2> Item 5. logout.php </h2>
+    <p>unsets session related data and returns you to index </p>
+    <h2>Item 6. register.php</h2>
+    <p>wow an actual registration page, has some filters like 3-8 characters in username?? or at least 8 characters in password</p>
+    <h2>Last item. utils.php</h2>
+    <p>Currently only has login-related functions, will later on be able to insert and show posts by their ID</p>
+    © Konrad Płotka of class 2PE of Technikum TEB Edukacja in Koszalin 2023.
 </body>
 </html>

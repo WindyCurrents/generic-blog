@@ -1,5 +1,5 @@
 <?php
-    require_once 'loginutils.php';
+    require_once 'utils.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +18,7 @@
                     }
                     else
                     {
-                        echo '<a href="loginpage.php">Admin Panel Login</a> <a href="registration.php">Register (Not quite working yet)</a>';
+                        echo '<a href="login.php">Admin Panel Login</a> <a href="register.php">Register (Not quite working yet)</a>';
                     }
                 ?>
     <a href="genericblogbetadocumentationpl.html">Project documentation (Polish)</a>
