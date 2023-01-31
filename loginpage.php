@@ -1,5 +1,5 @@
 <?php
-    require_once 'loginmanagescript.php';
+    require_once 'loginutils.php';
     if(isLoggedOn())
     {
         header('Location: index.php');

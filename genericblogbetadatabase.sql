@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 07 Wrz 2022, 14:29
--- Wersja serwera: 10.4.24-MariaDB
--- Wersja PHP: 8.1.6
+-- Generation Time: Jan 31, 2023 at 02:08 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,37 +18,46 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Baza danych: `genericblogbetadatabase`
+-- Database: `genericblogbetadatabase`
 --
+CREATE DATABASE IF NOT EXISTS `genericblogbetadatabase` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `genericblogbetadatabase`;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `userdata`
+-- Table structure for table `userdata`
 --
 
 CREATE TABLE `userdata` (
   `UserID` int(11) NOT NULL,
   `Username` text NOT NULL,
   `Password` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Indeksy dla zrzutów tabel
+-- Dumping data for table `userdata`
+--
+
+INSERT INTO `userdata` (`UserID`, `Username`, `Password`) VALUES
+(1, 'XPCurrent', '$2y$10$1vmZCAb/zXoHlnfPJU.3cO2oYEWAye4V1EbDqirZgWaFbteD6OR0a');
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Indeksy dla tabeli `userdata`
+-- Indexes for table `userdata`
 --
 ALTER TABLE `userdata`
   ADD PRIMARY KEY (`UserID`);
 
 --
--- AUTO_INCREMENT dla zrzuconych tabel
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT dla tabeli `userdata`
+-- AUTO_INCREMENT for table `userdata`
 --
 ALTER TABLE `userdata`
   MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;

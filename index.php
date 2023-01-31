@@ -1,5 +1,5 @@
 <?php
-    require_once 'loginmanagescript.php';
+    require_once 'loginutils.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +11,16 @@
 </head>
 <body>
     <h1>You landed in the beta of a Generic Blog. Leave me alone.</h1>
-    <a href="loginpage.php">Administration Panel Login (only me)</a>
+    <?php
+                    if(isLoggedOn())
+                    {
+                        echo '<a href="logout.php">Log out of ('.getUserName().')</a>';
+                    }
+                    else
+                    {
+                        echo '<a href="loginpage.php">Admin Panel Login</a> <a href="registration.php">Register (Not quite working yet)</a>';
+                    }
+                ?>
     <a href="genericblogbetadocumentationpl.html">Project documentation (Polish)</a>
     <a href="genericblogbetadocumentationen.html">Project documentation (English)</a><br>
     © Konrad Płotka of class 2PE of Technikum TEB Edukacja in Koszalin 2022.
