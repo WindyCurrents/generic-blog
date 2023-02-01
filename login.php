@@ -18,7 +18,7 @@
             exit();
         }
 
-        $login_msg = 'Nieprawidłowy login lub hasło!';
+        $login_msg = 'Username or password incorrect!';
     }
 ?>
 <!DOCTYPE html>
@@ -40,9 +40,9 @@
                         echo '<div class="redtext">'.$login_msg.'</div>';
                     }
                 ?>
-                <label>Login: <input type='text' name='login' /></label></div>
+                <label>Username: <input type='text' name='login' /></label></div>
                 <div class='input'>
-                <label>Hasło: <input type='password' name='password'/></label></div>
+                <label>Password: <input type='password' name='password'/></label></div>
                 <div class='input'>
                 <input type='submit' value='Log in' /></div>
             </form>

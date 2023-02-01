@@ -10,19 +10,19 @@
     <title>Generic Blog Beta - Main Page</title>
 </head>
 <body>
-    <h1>You landed in the beta of a Generic Blog. Leave me alone.</h1>
+    <h1>Welcome to Generic Blog Beta!</h1>
     <?php
                     if(isLoggedOn())
                     {
-                        echo '<a href="logout.php">Log out of ('.getUserName().')</a>';
+                        echo '<a href="logout.php">Log out of '.getUserName().'</a> <a href="insertform.php">Post something!</a>';
                     }
                     else
                     {
-                        echo '<a href="login.php">Admin Panel Login</a> <a href="register.php">Register (Not quite working yet)</a>';
+                        echo '<a href="login.php">Login</a> <a href="register.php">Register</a>';
                     }
                 ?>
+    <a href="searchform.php">Search for a post</a>
     <a href="genericblogbetadocumentationpl.html">Project documentation (Polish)</a>
-    <a href="genericblogbetadocumentationen.html">Project documentation (English)</a><br>
-    © Konrad Płotka of class 2PE of Technikum TEB Edukacja in Koszalin 2022.
+    <a href="genericblogbetadocumentationen.html">Project documentation (English)</a>
 </body>
 </html>
