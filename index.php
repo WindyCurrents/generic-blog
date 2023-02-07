@@ -1,5 +1,8 @@
 <?php
     require_once 'utils.php';
+    if(isset($_SESSION['LastPostID'])==false){
+        $_SESSION['LastPostID']=0;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +15,9 @@
 <body>
     <h1>Welcome to Generic Blog Beta!</h1>
     <?php
+    if($_SESSION['LastPostID']!=0){
+        echo "You have recently posted. The ID of your last post is ".$_SESSION['LastPostID']."<br>";
+    }
                     if(isLoggedOn())
                     {
                         echo '<a href="logout.php">Log out of '.getUserName().'</a> <a href="insertform.php">Post something!</a>';
