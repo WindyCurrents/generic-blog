@@ -3,6 +3,9 @@
     if(isset($_SESSION['LastPostID'])==false){
         $_SESSION['LastPostID']=0;
     }
+    if(isset($_SESSION['LastDeletedPost'])==false){
+        $_SESSION['LastDeletedPost']=0;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,15 +21,18 @@
     if($_SESSION['LastPostID']!=0){
         echo "You have recently posted. The ID of your last post is ".$_SESSION['LastPostID']."<br>";
     }
-                    if(isLoggedOn())
-                    {
-                        echo '<a href="logout.php">Log out of '.getUserName().'</a> <a href="insertform.php">Post something!</a>';
-                    }
-                    else
-                    {
-                        echo '<a href="login.php">Login</a> <a href="register.php">Register</a>';
-                    }
-                ?>
+    if($_SESSION['LastDeletedPost']!=0){
+        echo "You have recently deleted a post. Goodbye, post of the ID ".$_SESSION['LastPostID']."!<br>";
+    }
+    if(isLoggedOn())
+    {
+    echo '<a href="logout.php">Log out of '.getUserName().'</a> <a href="insertform.php">Post something!</a> <a href="listpostids.php">See the IDs of all your posts</a> <a href="postdeleteform.php">Delete a post</a>';
+    }
+    else
+    {
+    echo '<a href="login.php">Login</a> <a href="register.php">Register</a>';
+    }
+    ?>
     <a href="searchform.php">Search for a post</a>
     <a href="genericblogbetadocumentationpl.html">Project documentation (Polish)</a>
     <a href="genericblogbetadocumentationen.html">Project documentation (English)</a>

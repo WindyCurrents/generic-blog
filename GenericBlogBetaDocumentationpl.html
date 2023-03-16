@@ -7,31 +7,34 @@
     <title>Generic Blog Beta - Dokumentacja (Polski)</title>
 </head>
 <body>
-    <h1> Dokumentacja projektu generic-blog-beta </h1>
-    <h2> Pozycja 1. connect.php</h2>
-    <p> Podtytuł a .: Pierwsze 4 części kodu </p>
-    <p> skrypt ustanawia 4 zmienne połączenia z bazą danych użytkowników bloga, $ host = "localhost", $ user = "root", $ pass = "", $ dbname = "genericblogbetadatabase" </p>
-    <p> Subb.: Reszta kodu </p>
-    <p> używając zmiennych w pierwszych wierszach, skrypt próbuje połączyć się z bazą danych </p>
-    <h2> Pozycja 2. genericblogbetadatabase.sql </h2>
-    <p>jest to baza danych użytkowników z tabelą użytkowników zawierającą kolumny identyfikatora, adresu e-mail, nazwy użytkownika i hasła. id jest kluczem podstawowym </p>
-    <h2> Pozycja 3. index.php </h2>
-    <p>jest to niestylizowana strona informująca użytkownika, że jest to niedokończona wersja projektu ogólnego bloga. znajduje się link do logowania do serwisu lub rejestracji. może również pokazać łącze wylogowania, jeśli użytkownik jest teraz zalogowany. </p>
-    <h2> Pozycja 4. login.php </h2>
-    <p> och, wow, to jest strona logowania </p>
-    <h2> Pozycja 5. logout.php </h2>
-    <p>usuwa dane związane z sesją i powraca do indeksu </p>
-    <h2>Element 6. register.php</h2>
-    <p>wow rzeczywista strona rejestracji, ma pewne filtry, takie jak 3-8 znaków w nazwie użytkownika? lub co najmniej 8 znaków w haśle</p>
-    <h2>Element 7. utils.php</h2>
-    <p>Obecnie ma tylko funkcje związane z logowaniem, później będzie można wstawiać i wyświetlać posty według ich identyfikatora</p>
-    <h2>Element 8. insertform.php</h2>
-    <p>Prosty formularz z prośbą o podanie tytułu i treści nowego posta.</p>
-    <h2>Element 9. insertscript.php</h2>
-    <p>Pobiera wprowadzone dane oraz identyfikator użytkownika i wysyła je do bazy danych.</p>
-    <h2>Element 10. searchform.php</h2>
-    <p>Prosty formularz z prośbą o podanie identyfikatora posta.</p>
-    <h2>Element 11. searchscript.php</h2>
-    <p>Wyszukuje wpis z identyfikatorem podanym w formularzu.</p>
+    <h1>Dokumentacja projektu generic-blog-beta </h1>
+    <h2>Punkt 1. 127_0_0_1.sql</h2>
+    <p>To jest plik bazy danych, który importujesz na serwer, aby mieć działającą bazę danych dla tego projektu.</p>
+    <h2>Punkt 2. connect.php</h2>
+    <p>Zawiera poświadczenia do serwera bazy danych i próbuje nawiązać połączenie.</p>
+    <h2>Punkt 3. index.php</h2>
+    <p>Strona główna tego projektu. Pokazuje niektóre opcje tylko zalogowanym użytkownikom i posiada skrypty dotyczące komunikatów o publikowaniu lub usuwaniu.</p>
+    <h2>Punkt 4. insertform.php</h2>
+    <p>Prosty formularz z 2 polami, który pobiera dane do insertscript.php.</p>
+    <h2>Punkt 5. insertscript.php</h2>
+    <p>Pobiera dane z insertform.php i dodaje je do tabeli postów w bazie danych. Ustawia również wartość sesji odczytywaną później przez index.php w celu wyświetlenia komunikatu.</p>
+    <h2>Punkt 6. listpostids.php</h2>
+    <p>Sprawdza Twój identyfikator użytkownika z identyfikatorami twórców wszystkich postów i wyświetla identyfikatory postów, do których pasuje.</p>
+    <h2>Punkt 7. login.php</h2>
+    <p>Formularz logowania, który zawiera również skrypty logowania.</p>
+    <h2>Punkt 8. logout.php</h2>
+    <p>Usuwa wszystko związane z sesją i powraca do index.php.</p>
+    <h2>Punkt 9. postdeleteform.php</h2>
+    <p>Jednopolowy formularz, który wysyła wynik do postdeletescript.php.</p>
+    <h2>Punkt 10. postdeletescript.php</h2>
+    <p>Zapewnia, że usuwasz swój własny post, a jeśli się powiedzie, ustawia wartość sesji odczytywaną później przez index.php w celu wyświetlenia wiadomości.</p>
+    <h2>Punkt 11. register.php</h2>
+    <p>Zwykła strona rejestracji z 2 filtrami: nazwa użytkownika musi mieć od 3 do 16 znaków, tylko znaki alfanumeryczne i podkreślenia, a hasło musi mieć co najmniej 8 znaków.</p>
+    <h2>Punkt 12. searchform.php</h2>
+    <p>postdeleteform.php, z wyjątkiem wysyłania go do searchscript.php.</p>
+    <h2>Punkt 13. searchscript.php</h2>
+    <p>Próbuje znaleźć post o podanym identyfikatorze i wyświetlić go.</p>
+    <h2>Punkt 14. utils.php</h2>
+    <p>Funkcje związane z logowaniem i rejestracją.</p>
 </body>
 </html>

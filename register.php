@@ -18,7 +18,7 @@
         if(!preg_match('/[a-zA-Z0-9_]{3,16}/',$username))
         {
             $allright = false;
-            $username_msg = 'Username should have 3-8 alphanumeric characters or underlines.';
+            $username_msg = 'Username should have 3-16 alphanumeric characters or underlines.';
         }
 
         if(!preg_match('/.{8,}/',$password))
