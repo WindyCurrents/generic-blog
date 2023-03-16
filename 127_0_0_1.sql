@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 01, 2023 at 09:29 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Czas generowania: 16 Mar 2023, 13:55
+-- Wersja serwera: 10.4.27-MariaDB
+-- Wersja PHP: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,15 +18,15 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `genericblogbetadatabase`
+-- Baza danych: `generic-blog-database`
 --
-CREATE DATABASE IF NOT EXISTS `genericblogbetadatabase` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `genericblogbetadatabase`;
+CREATE DATABASE IF NOT EXISTS `generic-blog-database` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `generic-blog-database`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `posts`
+-- Struktura tabeli dla tabeli `posts`
 --
 
 CREATE TABLE `posts` (
@@ -37,16 +37,16 @@ CREATE TABLE `posts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `posts`
+-- Zrzut danych tabeli `posts`
 --
 
 INSERT INTO `posts` (`PostID`, `PosterID`, `PostTitle`, `PostContents`) VALUES
-(1, 1, 'd', 'f');
+(1, 1, 'Administrator\'s message', 'Hello, users! Generic Blog has reached the drop of the BETA wording! That means all currently added features work!');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktura tabeli dla tabeli `users`
 --
 
 CREATE TABLE `users` (
@@ -57,40 +57,40 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `users`
+-- Zrzut danych tabeli `users`
 --
 
 INSERT INTO `users` (`ID`, `email`, `username`, `password`) VALUES
 (1, 'xpnew472@outlook.com', 'XPCurrent', '$2y$10$1zrBAsrkRTmQhD4QJP95Se4qqRohFBWFotuyjFKa2fjF9j8v0fBu6');
 
 --
--- Indexes for dumped tables
+-- Indeksy dla zrzutów tabel
 --
 
 --
--- Indexes for table `posts`
+-- Indeksy dla tabeli `posts`
 --
 ALTER TABLE `posts`
   ADD PRIMARY KEY (`PostID`);
 
 --
--- Indexes for table `users`
+-- Indeksy dla tabeli `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`ID`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT dla zrzuconych tabel
 --
 
 --
--- AUTO_INCREMENT for table `posts`
+-- AUTO_INCREMENT dla tabeli `posts`
 --
 ALTER TABLE `posts`
   MODIFY `PostID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT dla tabeli `users`
 --
 ALTER TABLE `users`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
