@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generic Blog Beta - Documentation (English)</title>
+    <title>Generic Blog - Documentation (English)</title>
 </head>
 <body>
-    <h1>Documentation of the generic-blog-beta project </h1>
+    <h1>Documentation of the generic-blog project </h1>
     <h2>Point 1. 127_0_0_1.sql</h2>
     <p>This is the data base file you import to the server to have a working database to this project.</p>
     <h2>Point 2. connect.php</h2>
@@ -36,5 +36,9 @@
     <p>Attempts finding a post of the provided ID and displaying it.</p>
     <h2>Point 14. utils.php</h2>
     <p>Login and register-related functions.</p>
+    <h2>Point 15. editform.php</h2>
+    <p>Asks for the ID of the post you'll edit, its new title and contents. Sends everything to editscript.php.</p>
+    <h2>Point 16. editscript.php</h2>
+    <p>Ensures the edited post belongs to you and proceeds to update it. Also sets a session value later read by index.php to display a message.</p>
 </body>
 </html>

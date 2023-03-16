@@ -6,6 +6,9 @@
     if(isset($_SESSION['LastDeletedPost'])==false){
         $_SESSION['LastDeletedPost']=0;
     }
+    if(isset($_SESSION['LastEditedPost'])==false){
+        $_SESSION['LastEditedPost']=0;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,20 +16,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generic Blog Beta - Main Page</title>
+    <title>Generic Blog - Main Page</title>
 </head>
 <body>
-    <h1>Welcome to Generic Blog Beta!</h1>
+    <h1>Welcome to Generic Blog!</h1>
     <?php
     if($_SESSION['LastPostID']!=0){
-        echo "You have recently posted. The ID of your last post is ".$_SESSION['LastPostID']."<br>";
+        echo "You have recently posted. Glad to have you aboard, post of the ID ".$_SESSION['LastPostID'].".<br>";
     }
     if($_SESSION['LastDeletedPost']!=0){
-        echo "You have recently deleted a post. Goodbye, post of the ID ".$_SESSION['LastPostID']."!<br>";
+        echo "You have recently deleted a post. Goodbye, post of the ID ".$_SESSION['LastDeletedPost']."!<br>";
+    }
+    if($_SESSION['LastEditedPost']!=0){
+        echo "You have recently edited a post. Welcome anew, post of the ID ".$_SESSION['LastEditedPost']."!<br>";
     }
     if(isLoggedOn())
     {
-    echo '<a href="logout.php">Log out of '.getUserName().'</a> <a href="insertform.php">Post something!</a> <a href="listpostids.php">See the IDs of all your posts</a> <a href="postdeleteform.php">Delete a post</a>';
+    echo '<a href="logout.php">Log out of '.getUserName().'</a> <a href="insertform.php">Post something!</a> <a href="editform.php">Edit something!</a> <a href="listpostids.php">See the IDs of all your posts</a> <a href="postdeleteform.php">Delete a post</a>';
     }
     else
     {

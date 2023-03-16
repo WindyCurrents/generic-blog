@@ -8,7 +8,7 @@ $connection = new mysqli($host,$user,$pass,$dbname);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generic Blog Beta - Search Results</title>
+    <title>Generic Blog - Search Results</title>
 </head>
 <body>
 <?php
@@ -20,7 +20,7 @@ $connection = new mysqli($host,$user,$pass,$dbname);
 			WHERE PostID = ".$query." AND users.ID = posts.PosterID") or die(mysqli_error());
 		if(mysqli_num_rows($raw_results) > 0){ 
 			while($results = mysqli_fetch_array($raw_results)){
-				echo " "."</h3><h3>".$results['PostTitle']."</h3>Posted by:".$results['username']."<br>".$results['PostContents']."</p>";
+				echo " "."</h3><h3>".$results['PostTitle']."</h3>Posted by: ".$results['username']."<br>".$results['PostContents']."</p>";
 			}
 			
 		}
