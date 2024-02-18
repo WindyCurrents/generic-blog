@@ -37,15 +37,6 @@ CREATE TABLE `posts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Zrzut danych tabeli `posts`
---
-
-INSERT INTO `posts` (`PostID`, `PosterID`, `PostTitle`, `PostContents`) VALUES
-(1, 1, 'Administrator\'s message', 'Hello, users! Generic Blog has reached the drop of the BETA wording! That means all currently added features work!');
-
--- --------------------------------------------------------
-
---
 -- Struktura tabeli dla tabeli `users`
 --
 
@@ -56,12 +47,6 @@ CREATE TABLE `users` (
   `password` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Zrzut danych tabeli `users`
---
-
-INSERT INTO `users` (`ID`, `email`, `username`, `password`) VALUES
-(1, 'xpnew472@outlook.com', 'XPCurrent', '$2y$10$1zrBAsrkRTmQhD4QJP95Se4qqRohFBWFotuyjFKa2fjF9j8v0fBu6');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -87,13 +72,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT dla tabeli `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `PostID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `PostID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
 -- AUTO_INCREMENT dla tabeli `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generic Blog - Documentation (English)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Project "Generic Blog" - Documentation</h1>
+    <h2>1. Introduction</h2>
+    <p>This is the documentation for the project "Generic Blog". The repository for this project dates back to September 7th, 2022.</p>
+    <h2>2. Installation</h2>
+    <p>The project was only tested to work with a XAMPP Apache+MySQL environment. It goes as follows:</p>
+    <ol>
+        <li>Download and install XAMPP from <a href="https://www.apachefriends.org/index.html">https://www.apachefriends.org/index.html</a></li>
+        <li>Clone the repository to the htdocs folder of your XAMPP installation</li>
+        <li>Start the Apache and MySQL services from the XAMPP Control Panel</li>
+        <li>Open the phpMyAdmin page from the XAMPP Control Panel</li>
+        <li>Import the 127_0_0_1.sql file directly to the server. It's a skeleton of the database, with no actual data in it.</li>
+        <li>Open the project in your web browser by going to "http://localhost/generic-blog" (or however you named the folder with project files)</li>
+    </ol>
+    <h2>3. Usage</h2>
+    <p>The project is a simple blog, with the following features:</p>
+    <ul>
+        <li>Post creation, viewing, editing and deleting</li>
+        <li>Login and registration</li>
+    </ul>
+    <h2>4. Explanation of all files</h2>
+    <p>The project is divided into the following files:</p>
+    <ul>
+        <li>127_0_0_1.sql - The skeleton of the database.</li>
+        <li>connect.php - The file that connects to the database.</li>
+        <li>index.php - The main page of the blog, with functions at disposal being displayed.</li>
+        <li>listpostids.php - A simple page that displays the IDs of all posts made by the currently logged in user.</li>
+        <li>login.php - The login page.</li>
+        <li>logout.php - A very short PHP script that unsets everything related to the session and redirects the user back to index.php.</li>
+        <li>postaddform.php - The page where the user can create a new post.</li>
+        <li>postaddscript.php - The script that adds a new post to the database.</li>
+        <li>postdeleteform.php - The page where the user can delete a post.</li>
+        <li>postdeletescript.php - The script that deletes a post from the database.</li>
+        <li>posteditform.php - The page where the user can edit a post.</li>
+        <li>posteditscript.php - The script that edits a post in the database.</li>
+        <li>register.php - The registration page.</li>
+        <li>searchform.php - The page where the user can search for a post based on its ID.</li>
+        <li>searchresults.php - The script that searches for a post based on its ID, and displays it to the user.</li>
+        <li>styles.css - The stylesheet for the project.</li>
+        <li>utils.php - The center for PHP functions used by the project.</li>
+    </ul>
+    <h2>5. Conclusion</h2>
+    <p>This project is a simple blog, with the main goal of demonstrating the use of PHP and MySQL in a web application.</p>
+    <p>For any questions, please contact me at windycurrents274_@outlook.com.</p>
+    <p>Thank you for reading!</p>
+    <p>Best regards,</p>
+    <p>"Windy Currents", creator of the project.</p>
+    <button onclick="window.location.href='index.php'">Back to the main page</button>
+</body>
+</html>

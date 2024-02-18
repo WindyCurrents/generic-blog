@@ -1,15 +1,17 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
 	<title>Generic Blog - Find a post</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="container">
-	<form action="searchscript.php" method="GET">
-        <h1>Select a post ID you search for:</h1>
-		<input type="number" name="query" />
+	<form action="searchresults.php" method="GET">
+        <h1>Generic Blog - Searching for a post</h1>
+		<label>Input the ID of the post you're looking for: <input type="number" name="query" /></label><br>
 		<input type="submit" value="Search" />
+		<input type='button' value='Back' onclick="window.location.href='index.php'" />
 	</form>
 </div>
 </body>

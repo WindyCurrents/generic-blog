@@ -1,61 +1,51 @@
 <?php
-    require_once 'utils.php';
+require_once 'utils.php';
 
-    if(isLoggedOn())
-    {
-        header('Location: index.php');
-        exit();
+if (isLoggedOn()) {
+    header('Location: index.php');
+    exit();
+}
+
+if (isset($_POST['email'])) {
+    $allright = true;
+
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    if (!preg_match('/[a-zA-Z0-9_]{3,16}/', $username)) {
+        $allright = false;
+        $username_msg = 'Username should have 3-16 alphanumeric characters or underlines.';
     }
 
-    if(isset($_POST['email']))
-    {
-        $allright = true;
+    if (!preg_match('/.{8,}/', $password)) {
+        $allright = false;
+        $password_msg = 'Password should have at least 8 characters';
+    }
 
-        $username = $_POST['username'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
+    if ($password != $_POST['verificate']) {
+        $password_msg = 'Passwords are not the same. Retype.';
+    }
 
-        if(!preg_match('/[a-zA-Z0-9_]{3,16}/',$username))
-        {
-            $allright = false;
-            $username_msg = 'Username should have 3-16 alphanumeric characters or underlines.';
-        }
+    $email2 = filter_var($email, FILTER_SANITIZE_EMAIL);
 
-        if(!preg_match('/.{8,}/',$password))
-        {
-            $allright = false;
-            $password_msg = 'Password should have at least 8 characters';
-        }
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL) || $email != $email2) {
+        $allright = false;
+        $email_msg = 'Incorrect e-mail address.';
+    }
 
-        if($password != $_POST['verificate'])
-        {
-            $password_msg = 'Passwords are not the same. Retype.';
-        }
+    if ($allright == true) {
+        $msg = register($username, $email, $password);
 
-        $email2 = filter_var($email, FILTER_SANITIZE_EMAIL);
-
-        if(!filter_var($email, FILTER_VALIDATE_EMAIL) || $email != $email2)
-        {
-            $allright = false;
-            $email_msg = 'Incorrect e-mail address.';
-        } 
-
-        if($allright == true)
-        {
-            $msg = register($username, $email, $password);
-
-            if($msg == 'No error')
-            {
-                $msg = '';
-                header('Location: index.php');
-                exit();
-            }
-            else
-            {
-                $existing_msg = $msg;
-            }
+        if ($msg == 'No error') {
+            $msg = '';
+            header('Location: index.php');
+            exit();
+        } else {
+            $existing_msg = $msg;
         }
     }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,15 +54,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generic Blog - Register</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="wrapper">
         <div class="container">
+            <h1>Generic Blog - Registration</h1>
             <form method='POST' action='register.php'>
                 <div class='input'><?php
                     if(isset($username_msg))
                     {
-                        echo '<div class="redtext">'.$username_msg.'</div>';
+                        echo '<div class="redtext" style="color: red;">'.$username_msg.'</div>';
                     }
                 ?>
                 <label>User name: <input type='text' name='username' 
@@ -121,7 +113,8 @@
                         echo '<div class="redtext">'.$existing_msg.'</div>';
                     }
                 ?>
-                <input type='submit' value='Register' /></div>
+                <input type='submit' value='Register' />
+                <input type='button' value='Back' onclick="window.location.href='index.php'" /></div>
             </form>
         </div>
     </div>

@@ -1,4 +1,3 @@
 # generic-blog
-Generic Blog.<br>
-This is a project for school purposes.<br>
-Current state: Works, not stylized.
+....................................................................................<br>
+I've finally reworked and stylized this page, after almost a year of inactivity.

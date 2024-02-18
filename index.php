@@ -17,6 +17,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generic Blog - Main Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Welcome to Generic Blog!</h1>
@@ -32,15 +33,14 @@
     }
     if(isLoggedOn())
     {
-    echo '<a href="logout.php">Log out of '.getUserName().'</a> <a href="insertform.php">Post something!</a> <a href="editform.php">Edit something!</a> <a href="listpostids.php">See the IDs of all your posts</a> <a href="postdeleteform.php">Delete a post</a>';
+    echo '<a href="logout.php">Log out of '.getUserName().'</a><br><a href="postaddform.php">Post something!</a><br><a href="posteditform.php">Edit something!</a><br><a href="listpostids.php">See the IDs of all your posts</a><br><a href="postdeleteform.php">Delete a post</a><br>';
     }
     else
     {
-    echo '<a href="login.php">Login</a> <a href="register.php">Register</a>';
+    echo '<a href="login.php">Login</a><br><a href="register.php">Register</a><br>';
     }
     ?>
-    <a href="searchform.php">Search for a post</a>
-    <a href="genericblogbetadocumentationpl.html">Project documentation (Polish)</a>
-    <a href="genericblogbetadocumentationen.html">Project documentation (English)</a>
+    <a href="searchform.php">Search for a post</a><br>
+    <a href="documentation-english.html">Project documentation</a><br>
 </body>
 </html>

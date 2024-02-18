@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+a {
+    color: lightblue;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Oxanium', sans-serif;
+}
+
+a:hover {
+    color: lightcoral;
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+    background-color: lightgray;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px; /* Add space below */
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    background-color: gray;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"] {
+    background-color: lightgray;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px; /* Add space below */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus {
+    background-color: gray;
+}
+input[name="contents"] {
+    font-size: 16px;
+    height: 100px;
+    resize: vertical;
+}
