@@ -18,11 +18,6 @@ function getUserName()
     return isLoggedOn() ? $_SESSION['username'] : 0;
 }
 
-function getUserEmail()
-{
-    return isLoggedOn() ? $_SESSION['email'] : 0;
-}
-
 function logOn($login, $password)
 {
     global $pdo;
